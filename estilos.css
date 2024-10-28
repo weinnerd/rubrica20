@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;   /*establece la familia de fuentes a Arial o una fuente sans-serif*/
+}
+
+header {
+  color: white;   /*establece el color del texto*/
+  padding: 1rem;    /*establece el margin a 1rem*/
+}
+
+.bg-my-custom-color {
+  background-color: #41b4c9;    /*establece el color de fondo*/
+}
+
+main {
+  padding: 2rem;    /*establece el margin a 2rem*/
+}
+
+#cards-container {
+  display: flex;    /*establece la propiedad display a flex*/
+  flex-wrap: wrap;    /*permite que los elementos flex se envuelvan en la siguiente línea*/
+  justify-content: space-between;    /*establece la propiedad justify-content a space-between*/
+}
+
+.card {
+  width: 30%;    /*establece el ancho al 30% */
+  margin-bottom: 2rem;    /* establece el margin-bottom a 2rem */
+  transition: transform 0.3s ease;    /*aplica un efecto de transición a la propiedad en 0,3 segundos*/
+}
+
+.card:hover {
+  transform: scale(1.1);    /*escala la tarjeta al 110% al hover*/
+}
+
+.card-title {
+  margin-top: 1rem;    /*establece el margin-top a 1rem */
+  font-size: 1.5rem;    /*establece el tamaño de la fuente a 1.5rem */
+}
+
+footer {
+  position: fixed;    /*establece la propiedad position a fija*/
+  bottom: 0;    /*establece la propiedad bottom a 0*/
+  width: 100%;    /*establece el ancho al 100%*/
+}
+
+@media (max-width: 767.98px) {    /*define las reglas CSS para pantallas con un ancho máximo de 767,98px*/
+  .card {
+    width: 100%;    /*establece el ancho al 100%*/
+  }
+  
+  .selected-card {
+    width: 100% !important;    /*establece el ancho al 100% y añade la palabra clave !important para anular otras reglas CSS*/
+    margin: 0 auto;    /*establece el margen a 0 auto para centrar la tarjeta*/
+  }
+  
+  .selected-card .card-title {
+    font-size: 2rem;    /*establece el tamaño de la fuente a 2rem*/
+  }
+}
